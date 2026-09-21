@@ -1,41 +1,454 @@
-<div class="card">
+<title>نورا | صفحتي الشخصية</title>
 
-  <div class="profile">ن</div>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
 
-  <h1>نورة</h1>
+    body {
+        font-family: "Tahoma", "Arial", sans-serif;
+        background: linear-gradient(135deg, #fdf2f8, #f3e8ff, #eef2ff);
+        color: #40354d;
+        line-height: 1.8;
+        min-height: 100vh;
+    }
 
-  <p class="intro">
-    أهلاً وسهلاً بكم في صفحتي الشخصية 🌷<br>
-    هذه مساحة بسيطة للتعريف بي وباهتماماتي.
-  </p>
+    /* الحاوية الرئيسية */
+    .container {
+        width: 90%;
+        max-width: 1050px;
+        margin: auto;
+    }
 
-  <h2>نبذة عني</h2>
+    /* الهيدر */
+    header {
+        padding: 25px 0;
+    }
 
-  <p class="intro">
-    أحب التعلم واكتشاف الأشياء الجديدة،
-    وأستمتع بالسفر والقراءة والتقنية والتصميم.
-  </p>
+    nav {
+        background: rgba(255, 255, 255, 0.75);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 25px;
+        padding: 15px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 10px 30px rgba(110, 80, 130, 0.08);
+    }
 
-  <h2>اهتماماتي</h2>
+    .logo {
+        font-size: 25px;
+        font-weight: bold;
+        color: #9b6bb3;
+    }
 
-  <div class="interests">
-    <div class="interest">🎨 التصميم</div>
-    <div class="interest">✈️ السفر</div>
-    <div class="interest">📚 القراءة</div>
-    <div class="interest">💻 التقنية</div>
-  </div>
+    nav a {
+        text-decoration: none;
+        color: #66566f;
+        margin-right: 20px;
+        font-size: 14px;
+        transition: 0.3s;
+    }
 
-  <div class="contact">
-    <h2>تواصل معي</h2>
-    <p>
-      <a href="mailto:example@email.com">
-        example@email.com
-      </a>
-    </p>
-  </div>
+    nav a:hover {
+        color: #b06ca8;
+    }
 
-  <footer>
-    © 2026 نورة
-  </footer>
+    /* الواجهة الرئيسية */
+    .hero {
+        min-height: 520px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        padding: 60px 0;
+    }
+
+    .hero-text {
+        flex: 1;
+    }
+
+    .welcome {
+        display: inline-block;
+        background: #ffffff;
+        color: #a25ca0;
+        padding: 7px 18px;
+        border-radius: 30px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        box-shadow: 0 8px 20px rgba(100, 70, 120, 0.08);
+    }
+
+    h1 {
+        font-size: 58px;
+        color: #684878;
+        margin-bottom: 10px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+        color: #9c6baa;
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        color: #716679;
+        font-size: 17px;
+        max-width: 600px;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        display: inline-block;
+        background: linear-gradient(135deg, #b77ac7, #8d72c4);
+        color: white;
+        text-decoration: none;
+        padding: 12px 28px;
+        border-radius: 30px;
+        box-shadow: 0 10px 20px rgba(130, 90, 160, 0.2);
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 25px rgba(130, 90, 160, 0.3);
+    }
+
+    /* دائرة الصورة */
+    .hero-card {
+        width: 330px;
+        height: 330px;
+        background: linear-gradient(145deg, #f8dff2, #ddd6fe);
+        border-radius: 45% 55% 55% 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 20px 50px rgba(120, 80, 150, 0.15);
+        transform: rotate(-3deg);
+    }
+
+    .hero-card span {
+        font-size: 100px;
+        transform: rotate(3deg);
+    }
+
+    /* العناوين */
+    .section-title {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+        color: #684878;
+        margin-bottom: 8px;
+    }
+
+    .section-title p {
+        color: #887a91;
+    }
+
+    /* البطاقات */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-bottom: 80px;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 25px;
+        padding: 25px 18px;
+        text-align: center;
+        box-shadow: 0 12px 30px rgba(100, 70, 120, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 35px rgba(100, 70, 120, 0.13);
+    }
+
+    .icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+
+    .card h3 {
+        color: #72527f;
+        margin-bottom: 7px;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #817487;
+    }
+
+    /* قسم نبذة */
+    .about {
+        background: rgba(255, 255, 255, 0.72);
+        border-radius: 30px;
+padding: 45px;
+        margin-bottom: 80px;
+        box-shadow: 0 12px 35px rgba(100, 70, 120, 0.08);
+        text-align: center;
+    }
+
+    .about p {
+        max-width: 750px;
+        margin: auto;
+        color: #716679;
+        font-size: 17px;
+    }
+
+    /* التواصل */
+    .contact {
+        text-align: center;
+        background: linear-gradient(135deg, #eadcf8, #f8dff2);
+        border-radius: 35px;
+        padding: 50px 20px;
+        margin-bottom: 50px;
+    }
+
+    .contact h2 {
+        color: #684878;
+        margin-bottom: 12px;
+    }
+
+    .contact p {
+        color: #75677c;
+        margin-bottom: 20px;
+    }
+
+    .email {
+        display: inline-block;
+        background: white;
+        color: #8d5ca0;
+        padding: 10px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        margin-bottom: 20px;
+    }
+
+    /* الفوتر */
+    footer {
+        text-align: center;
+        padding: 25px;
+        color: #8a7d91;
+        font-size: 13px;
+    }
+
+    /* الجوال */
+    @media (max-width: 800px) {
+
+        nav {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        nav a {
+            margin: 0 7px;
+        }
+
+        .hero {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 45px 0;
+        }
+
+        .hero-card {
+            width: 250px;
+            height: 250px;
+        }
+
+        .hero-card span {
+            font-size: 75px;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about {
+            padding: 30px 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .container {
+            width: 92%;
+        }
+
+        .cards {
+            grid-template-columns: 1fr;
+        }
+
+        .hero-card {
+            width: 210px;
+            height: 210px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .hero h2 {
+            font-size: 21px;
+        }
+    }
+</style>
+<div class="container">
+
+    <!-- القائمة -->
+    <header>
+        <nav>
+            <div class="logo">🌸 نورا</div>
+
+            <div>
+                <a href="#about">نبذة عني</a>
+                <a href="#interests">اهتماماتي</a>
+                <a href="#contact">تواصل معي</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- الواجهة الرئيسية -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <span class="welcome">أهلاً وسهلاً بك في صفحتي 🌷</span>
+
+            <h1>نورا</h1>
+
+            <h2>مساحتي الشخصية على الويب</h2>
+
+            <p>
+                أهلاً وسهلاً بك في صفحتي الشخصية.
+                هنا أشارك بعضًا من اهتماماتي وشغفي
+                والأشياء التي أحبها وأستمتع بها.
+            </p>
+
+            <a class="button" href="#about">
+                اكتشف المزيد
+            </a>
+
+        </div>
+
+
+        <div class="hero-card">
+            <span>🌸</span>
+        </div>
+
+    </section>
+
+
+    <!-- نبذة -->
+    <section id="about" class="about">
+
+        <div class="section-title">
+            <h2>نبذة عني</h2>
+        </div>
+
+        <p>
+            أحب التعلم واكتشاف الأشياء الجديدة،
+            وأستمتع بالسفر والقراءة والتصميم والتقنية.
+            هذه الصفحة مساحة بسيطة تعبّر عني وعن اهتماماتي.
+        </p>
+
+    </section>
+
+
+    <!-- الاهتمامات -->
+    <section id="interests">
+
+        <div class="section-title">
+
+            <h2>اهتماماتي</h2>
+
+            <p>
+                بعض الأشياء التي أحبها وأستمتع بها
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="icon">🎨</div>
+                <h3>التصميم</h3>
+                <p>
+                    أحب التصميم والأفكار الإبداعية
+                    وصناعة الأشياء الجميلة.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">✈️</div>
+                <h3>السفر</h3>
+                <p>
+                    أحب اكتشاف الأماكن الجديدة
+                    والتعرف على ثقافات مختلفة.
+                </p>
+</div>
+
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <h3>القراءة</h3>
+                <p>
+                    أستمتع بالقراءة والتعلم
+                    واكتساب معلومات جديدة.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="icon">💻</div>
+                <h3>التقنية</h3>
+                <p>
+                    مهتمة بالتقنية والمواقع
+                    وتعلم الأشياء الجديدة.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- التواصل -->
+    <section id="contact" class="contact">
+
+        <h2>تواصل معي</h2>
+
+        <p>
+            يسعدني أن تتواصل معي عبر البريد الإلكتروني
+        </p>
+
+        <a class="email" href="mailto:example@email.com">
+            📧 example@email.com
+        </a>
+
+    </section>
+
+
+    <!-- الحقوق -->
+    <footer>
+        © 2026 نورا — جميع الحقوق محفوظة
+    </footer>
 
 </div>
