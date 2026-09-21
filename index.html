@@ -406,6 +406,12 @@ box-shadow: 0 15px 35px rgba(100, 70, 120, 0.08);
         }
     }
 
+/* الوضع الليلي */
+body.dark-mode {
+  background: #222;
+  color: white;
+}
+   
 </style>
 </h2>
 
@@ -547,3 +553,13 @@ box-shadow: 0 15px 35px rgba(100, 70, 120, 0.08);
     </footer>
 
 </div>
+
+document.body.classList.toggle("dark-mode");
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark");
+    }
+</script>
+
+<button onclick="toggleDarkMode()">🌙 الوضع الليلي</button>
