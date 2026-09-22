@@ -1,92 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>نورة</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Tahoma, Arial, sans-serif;
+    background: linear-gradient(135deg, #fce4ec, #eadcf8);
+    color: #60445f;
+}
+
+header {
+    background: linear-gradient(135deg, #c9a0dc, #f3a9c6);
+    padding: 70px 20px;
+    text-align: center;
+    border-radius: 0 0 45px 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    color: white;
+    font-size: 55px;
+    margin: 0;
+}
+
+header p {
+    color: white;
+    font-size: 20px;
+}
+
+.flower {
+    position: absolute;
+    font-size: 45px;
+    animation: move 4s infinite ease-in-out;
+}
+
+.f1 {
+    right: 8%;
+    top: 25px;
+}
+
+.f2 {
+    left: 8%;
+    top: 70px;
+    animation-delay: 1s;
+}
+
+.f3 {
+    right: 30%;
+    bottom: 15px;
+    animation-delay: 2s;
+}
+
+@keyframes move {
+    0%,100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(15deg);
+    }
+}
+
+nav {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px #d9bfd8;
+}
+
+nav a {
+    color: #9a5d8f;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #995c91;
+    font-size: 30px;
+}
+
+.about {
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 2;
+    box-shadow: 0 8px 25px #d9bfd8;
+}
+
+.cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 30px 20px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px #d9bfd8;
+    border: 2px solid #f2d5e6;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.icon {
+    font-size: 55px;
+}
+
+.card h3 {
+    color: #995c91;
+    font-size: 22px;
+}
+
+.card p {
+    line-height: 1.8;
+    color: #766274;
+}
+
+.info {
+    background: linear-gradient(135deg, #dfc8ef, #f5c4d8);
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.info span {
+    display: inline-block;
+    background: white;
+    padding: 12px 20px;
+    margin: 7px;
+    border-radius: 25px;
+}
+
+footer {
+    background: linear-gradient(135deg, #c9a0dc, #f3a9c6);
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+@media (max-width: 700px) {
+    header h1 {
+        font-size: 40px;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="flower f1">🌸</div>
+<div class="flower f2">🌷</div>
+<div class="flower f3">🌸</div>
+
+<h1>نورة</h1>
+
+<p>مرحبًا بكم في صفحتي الشخصية ♡</p>
+
+</header>
+
+<nav>
+<a href="#about">عن نورة</a>
+<a href="#hobbies">هواياتي</a>
+<a href="#favorites">أحب</a>
+<a href="#info">معلوماتي</a>
+</nav>
+
+<section id="about">
+
+<h2>🌸 عن نورة 🌸</h2>
+
+<div class="about">
+
 <p>
-  أنا نورة، أحب الأشياء الجميلة والبسيطة،
-  وأستمتع بقضاء الوقت مع عائلتي وصديقاتي.
+أنا نورة، أحب الأشياء الجميلة والبسيطة،
+وأستمتع بقضاء الوقت مع عائلتي وصديقاتي.
 </p>
 
 <p>
-  أحب التعلم وتجربة أشياء جديدة،
-  وأحب أن يكون يومي مليئًا بالأشياء اللطيفة والجميلة.
+أحب التعلم وتجربة أشياء جديدة،
+وأحب الأجواء الهادئة واللحظات الجميلة.
 </p>
-<div class="card">
-
-  <div class="icon">📚</div>
-
-  <h3>القراءة</h3>
-
-  <p>
-    أحب قراءة الكتب والقصص في وقت الفراغ.
-  </p>
 
 </div>
 
+</section>
+
+<section id="hobbies">
+
+<h2>🎀 هواياتي 🎀</h2>
+
+<div class="cards">
 
 <div class="card">
+<div class="icon">📚</div>
+<h3>القراءة</h3>
+<p>أحب قراءة الكتب والقصص في وقت الفراغ.</p>
+</div>
 
-  <div class="icon">🎨</div>
+<div class="card">
+<div class="icon">🎨</div>
+<h3>الرسم</h3>
+<p>أحب الرسم وتجربة الألوان والأفكار الجديدة.</p>
+</div>
 
-  <h3>الرسم</h3>
-
-  <p>
-    أحب الرسم وتجربة الألوان والأفكار الجديدة.
-  </p>
+<div class="card">
+<div class="icon">📸</div>
+<h3>التصوير</h3>
+<p>أحب تصوير اللحظات والأماكن الجميلة.</p>
+</div>
 
 </div>
 
+</section>
+
+<section id="favorites">
+
+<h2>💗 أشياء أحبها 💗</h2>
+
+<div class="cards">
 
 <div class="card">
-
-  <div class="icon">📸</div>
-
-  <h3>التصوير</h3>
-
-  <p>
-    أحب تصوير اللحظات والأماكن الجميلة.
-  </p>
-
-</div>
-<div class="card">
-
-  <div class="icon">🌸</div>
-
-  <h3>الزهور</h3>
-
-  <p>
-    أحب الزهور والأجواء الهادئة.
-  </p>
-
+<div class="icon">🌸</div>
+<h3>الزهور</h3>
+<p>أحب الزهور والأجواء الهادئة.</p>
 </div>
 
+<div class="card">
+<div class="icon">☕</div>
+<h3>القهوة</h3>
+<p>أحب جلسات القهوة الهادئة.</p>
+</div>
 
 <div class="card">
-
-  <div class="icon">☕️</div>
-
-  <h3>القهوة</h3>
-
-  <p>
-    أحب جلسات القهوة الهادئة.
-  </p>
+<div class="icon">✈️</div>
+<h3>السفر</h3>
+<p>أحب اكتشاف أماكن جديدة.</p>
+</div>
 
 </div>
 
+</section>
 
-<div class="card">
+<section id="info">
 
-  <div class="icon">✈️</div>
+<h2>💜 معلومات عن نورة 💜</h2>
 
-  <h3>السفر</h3>
+<div class="info">
 
-  <p>
-    أحب اكتشاف أماكن جديدة.
-  </p>
+<span>🎂 العمر: 23 سنة</span>
+<span>📍 المدينة: الرياض</span>
+<span>🎓 التخصص: تصميم</span>
+<span>🎨 اللون المفضل: الوردي</span>
+<span>🍰 الحلوى المفضلة: التشيز كيك</span>
 
 </div>
-<p>🎂 العمر: 23 سنة</p>
 
-<p>📍 المدينة: الرياض</p>
+</section>
 
-<p>🎓 التخصص: تصميم</p>
+<footer>
 
-<p>🎨 اللون المفضل: الوردي</p>
+<p>صُممت هذه الصفحة بحب لنورة 🌷</p>
 
-<p>🍰 الحلوى المفضلة: التشيز كيك</p>
+</footer>
+
+</body>
+</html>  
